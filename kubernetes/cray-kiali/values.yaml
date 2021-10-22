@@ -49,3 +49,8 @@ kiali-operator:
           requests:
             cpu: 10m
             memory: 64Mi
+      external_services:
+        prometheus:
+          url: http://cray-sysmgmt-health-promet-prometheus.sysmgmt-health:9090
+        tracing:
+          enabled: false
