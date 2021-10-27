@@ -25,6 +25,7 @@ global:
 
 kiali-operator:
   image:
+    tag: v1.28.1
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -41,7 +42,7 @@ kiali-operator:
       auth:
         strategy: anonymous
       deployment:
-        image_version: v1.25.0
+        image_version: v1.28.1
         resources:
           limits:
             cpu: "2"
