@@ -42,6 +42,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 #
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
