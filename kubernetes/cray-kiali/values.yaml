@@ -31,7 +31,7 @@ global:
 
 kiali-operator:
   image:
-    repo: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
+    repo: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali-operator
     tag: v1.28.1
     pullPolicy: IfNotPresent
   resources:
