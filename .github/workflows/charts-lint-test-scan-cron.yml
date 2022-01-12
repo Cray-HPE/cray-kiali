@@ -21,23 +21,19 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 #
-NAME ?= cray-kaili
-CHART_PATH ?= kubernetes
-CHART_VERSION ?= local
-
-HELM_UNITTEST_IMAGE ?= quintush/helm-unittest:3.3.0-0.2.5
-
-all : chart
-chart: chart_setup chart_package chart_test
-
-
-chart_setup:
-		mkdir -p ${CHART_PATH}/.packaged
-
-chart_package:
-		helm dep up ${CHART_PATH}/${NAME}
-		helm package ${CHART_PATH}/${NAME} -d ${CHART_PATH}/.packaged --version ${CHART_VERSION}
-
-chart_test:
-		helm lint "${CHART_PATH}/${NAME}"
-		docker run --rm -v ${PWD}/${CHART_PATH}:/apps ${HELM_UNITTEST_IMAGE} -3 ${NAME}
+name: Cron Lint, test, and scan Helm charts
+on:
+  schedule:
+    - cron: "38 23 * * *"
+  workflow_dispatch:
+jobs:
+  lint-test-scan:
+    uses: Cray-HPE/.github/.github/workflows/charts-lint-test-scan.yml@main
+    with:
+      ct-config: |
+        chart-dirs:
+          - kubernetes
+      scan-chart-snyk-args: "--severity-threshold=high --policy-path=kubernetes/.snyk"
+      scan-image-snyk-args: "--severity-threshold=high"
+    secrets:
+      snyk-token: ${{ secrets.SNYK_TOKEN }}
