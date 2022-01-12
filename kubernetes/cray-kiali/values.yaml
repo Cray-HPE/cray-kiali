@@ -27,11 +27,8 @@ externalAuthority: kiali-istio.local
 global:
   authGateway: services/services-gateway
 
-# See https://github.com/kiali/helm-charts/blob/master/kiali-server/values.yaml
-deployment:
-  image_name: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
-
 # See https://github.com/kiali/helm-charts/blob/master/kiali-operator/values.yaml
+
 kiali-operator:
   image:
     repo: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali-operator
@@ -52,6 +49,7 @@ kiali-operator:
       auth:
         strategy: anonymous
       deployment:
+        image_name: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
         image_version: v1.28.1
         resources:
           limits:
