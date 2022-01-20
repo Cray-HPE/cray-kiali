@@ -23,7 +23,7 @@
 #
 ---
 apiVersion: v2
-version: 0.2.1
+version: 0.2.2
 name: cray-kiali
 description: Cray Shasta Kiali deployment
 keywords:
@@ -41,3 +41,6 @@ maintainers:
 appVersion: 1.28.1
 annotations:
   artifacthub.io/license: MIT
+  artifacthub.io/images: |
+    - name: kiali
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali:v1.28.1
