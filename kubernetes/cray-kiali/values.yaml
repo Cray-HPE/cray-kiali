@@ -50,7 +50,7 @@ kiali-operator:
         strategy: anonymous
       deployment:
         image_name: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
-        image_version: v1.28.1
+        image_version: v1.28.1  # If the kiali image changes, update the annotation in Chart.yaml.
         resources:
           limits:
             cpu: "2"
