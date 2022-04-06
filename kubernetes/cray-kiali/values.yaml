@@ -32,7 +32,7 @@ global:
 kiali-operator:
   image:
     repo: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali-operator
-    tag: v1.28.1
+    tag: v1.33.1
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -50,7 +50,7 @@ kiali-operator:
         strategy: anonymous
       deployment:
         image_name: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
-        image_version: v1.28.1  # If the kiali image changes, update the annotation in Chart.yaml.
+        image_version: v1.33.1  # If the kiali image changes, update the annotation in Chart.yaml.
         resources:
           limits:
             cpu: "2"

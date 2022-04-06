@@ -23,7 +23,7 @@
 #
 ---
 apiVersion: v2
-version: 0.2.2
+version: 0.3.0
 name: cray-kiali
 description: Cray Shasta Kiali deployment
 keywords:
@@ -34,13 +34,13 @@ sources:
   - https://github.com/Cray-HPE/cray-kiali
 dependencies:
   - name: kiali-operator
-    version: 1.28.0
+    version: 1.33.0
     repository: https://kiali.org/helm-charts
 maintainers:
   - name: bo-quan
-appVersion: 1.28.1
+appVersion: 1.33.1
 annotations:
   artifacthub.io/license: MIT
   artifacthub.io/images: |
     - name: kiali
-      image: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali:v1.28.1
+      image: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali:v1.33.1
