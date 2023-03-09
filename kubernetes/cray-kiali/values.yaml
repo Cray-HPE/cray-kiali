@@ -25,7 +25,7 @@
 externalAuthority: kiali-istio.local
 
 global:
-  authGateways: 
+  authGateways:
   - services/services-gateway
   - services/customer-admin-gateway
 
