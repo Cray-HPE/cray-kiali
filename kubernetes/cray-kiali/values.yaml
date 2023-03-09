@@ -25,7 +25,9 @@
 externalAuthority: kiali-istio.local
 
 global:
-  authGateway: services/services-gateway
+  authGateways: 
+  - services/services-gateway
+  - services/customer-admin-gateway
 
 # See https://github.com/kiali/helm-charts/blob/master/kiali-operator/values.yaml
 
