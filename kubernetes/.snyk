@@ -5,11 +5,11 @@ ignore:
   SNYK-CC-K8S-44:
     - '*':
         reason: This is only general advice to grant fewer permissions.
-        expires: 2023-12-01T00:00:00.000Z
+        expires: 2024-12-01T00:00:00.000Z
         created: 2022-01-11T16:32:42.642Z
   SNYK-CC-K8S-47:
     - '*':
         reason: This is only general advice to grant fewer permissions.
-        expires: 2023-12-01T00:00:00.000Z
+        expires: 2024-12-01T00:00:00.000Z
         created: 2022-01-11T16:32:45.654Z
 patch: {}

@@ -1,7 +1,7 @@
 #
 # MIT License
 #
-# (C) Copyright [2022-2023] Hewlett Packard Enterprise Development LP
+# (C) Copyright [2022-2024] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -34,7 +34,7 @@ global:
 kiali-operator:
   image:
     repo: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali-operator
-    tag: v1.41.0
+    tag: v1.75.0
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -42,7 +42,7 @@ kiali-operator:
       memory: "200Mi"
     limits:
       cpu: "2000m"
-      memory: "1Gi"
+      memory: "4Gi"
   allowAdHocKialiImage: true
   cr:
     create: true
@@ -52,7 +52,7 @@ kiali-operator:
         strategy: anonymous
       deployment:
         image_name: artifactory.algol60.net/csm-docker/stable/quay.io/kiali/kiali
-        image_version: v1.41.0  # If the kiali image changes, update the annotation in Chart.yaml.
+        image_version: v1.75.0  # If the kiali image changes, update the annotation in Chart.yaml.
         resources:
           limits:
             cpu: "2"
