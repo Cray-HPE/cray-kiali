@@ -23,7 +23,7 @@
 #
 ---
 apiVersion: v2
-version: 0.5.2
+version: 0.5.3
 name: cray-kiali
 description: Cray Shasta Kiali deployment
 keywords:
