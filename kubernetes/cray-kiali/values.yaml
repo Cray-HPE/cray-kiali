@@ -65,3 +65,9 @@ kiali-operator:
           url: http://vmselect-vms.sysmgmt-health.svc.cluster.local:8481/select/0/prometheus
         tracing:
           enabled: false
+
+kubectl:
+  image:
+    repository: artifactory.algol60.net/csm-docker/stable/docker-kubectl
+    tag: 1.24.17
+    pullPolicy: IfNotPresent
